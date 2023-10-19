@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+.content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0341AE; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+header h1 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-right: 20px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD500; 
+}
+
+.nav-item {
+    position: relative;
+    padding: 5px 10px;
+}
+
+.nav-item::before, .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFD500; 
+    transition: 0.3s;
+}
+
+.nav-item::before {
+    top: 0;
+    left: 0;
+}
+
+.nav-item::after {
+    bottom: 0;
+    right: 0;
+}
+
+.nav-item:hover::before, .nav-item:hover::after {
+    width: 100%;
+}
+
+section {
+    padding: 40px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.intro p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.intro button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0341AE; 
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.intro button:hover {
+    background-color: #FFD500; 
+}
+
+.beginning {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('path-to-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.beginning h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #FFD500; 
+}
+
+.beginning p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tetris-image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 90%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s; 
+}
+
+.tetris-image:hover {
+    transform: scale(1.05); 
+}
+
+/* Timeline styles */
+.timeline {
+    padding: 50px;
+    background-color: #272727; 
+    text-align: center;
+}
+
+.timeline h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #FFD500; 
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.timeline-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: transform 0.3s; 
+}
+
+.timeline-image:hover {
+    transform: scale(1.1); 
+}
+
+.timeline-content {
+    flex: 1;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #FFD500; 
+}
+
+.timeline-content p {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) { 
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+}
+
+.tetris-versions {
+    margin: 40px 0;
+}
+
+.tetris-version {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.version-image {
+    width: 40%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.version-image:hover {
+    transform: scale(1.05);
+}
+
+.version-content {
+    width: 55%;
+}
+
+.version-content h3 {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #FFD500; 
+}
+
+.version-content p {
+    margin-bottom: 20px;
+}
+
+.version-content a {
+    text-decoration: none;
+    color: #FF3213; 
+    border: 2px solid #FF3213;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.version-content a:hover {
+    background-color: #FF3213;
+    color: white;
+}
+
+/* Footer styles */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #FF3213; 
+    flex-shrink: 0;
+}
+
